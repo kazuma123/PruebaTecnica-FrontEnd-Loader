@@ -1,0 +1,16 @@
+<ion-content *ngIf="isLoading" [fullscreen]="true">
+  <div class="loading">
+    <ion-grid>
+      <ion-row *ngFor="let row of currentImages">
+        <ion-col *ngFor="let image of row">
+          <ion-card>
+            <img [src]="image.url" alt="Imagen" class="imagen">
+            <ion-card-content>
+              {{image.text}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
